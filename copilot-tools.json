@@ -1,0 +1,46 @@
+{
+  "tools": [
+    {
+      "name": "execute_tnsr_q_command",
+      "description": "Execute a Tnsr-Q CLI command",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "The Tnsr-Q command to execute (without the 'tnsr-q' prefix)"
+          },
+          "args": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Arguments to pass to the Tnsr-Q command",
+            "default": []
+          }
+        },
+        "required": ["command"]
+      }
+    },
+    {
+      "name": "get_tnsr_q_help",
+      "description": "Get help information for Tnsr-Q CLI commands",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "The Tnsr-Q command to get help for (optional)",
+            "default": ""
+          }
+        }
+      }
+    },
+    {
+      "name": "list_tnsr_q_commands",
+      "description": "List all available Tnsr-Q CLI commands",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}
